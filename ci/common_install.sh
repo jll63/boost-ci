@@ -73,7 +73,7 @@ fi
 cd ..
 
 if [ ! -d boost-root ]; then
-    git clone -b $BOOST_BRANCH --depth 1 https://github.com/boostorg/boost.git boost-root
+    git clone -b $BOOST_BRANCH --depth 1 https://github.com/jll63/boost.git boost-root
     cd boost-root
 else
     cd boost-root
