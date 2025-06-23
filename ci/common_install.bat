@@ -20,7 +20,7 @@ if "%BOOST_BRANCH%" == "" (
     set BOOST_BRANCH=develop
     if "%BOOST_CI_TARGET_BRANCH%" == "master" set BOOST_BRANCH=master
 )
-git clone -b %BOOST_BRANCH% --depth 1 https://github.com/boostorg/boost.git boost-root || EXIT /B 1
+git clone -b %BOOST_BRANCH% --depth 1 https://github.com/jll63/boost.git boost-root || EXIT /B 1
 cd boost-root || EXIT /B 1
 git submodule update -q --init tools/boostdep || EXIT /B 1
 xcopy /s /e /q /I %BOOST_CI_SRC_FOLDER% libs\%SELF% || EXIT /B 1
